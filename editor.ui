@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Editor</class>
+ <widget class="QMainWindow" name="Editor">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1580</width>
+    <height>1086</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(30, 33, 39);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="VerticalSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>5</number>
+      </property>
+      <widget class="ScreenView" name="ScreenViewW">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>1000</width>
+         <height>1000</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(40, 44, 52);
+</string>
+       </property>
+      </widget>
+      <widget class="QSplitter" name="HorizontalSplitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="handleWidth">
+        <number>5</number>
+       </property>
+       <widget class="TargetPropertyView" name="TargetPropertyViewW" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>360</width>
+          <height>360</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame
+{
+  border: 5px solid black;
+}</string>
+        </property>
+        <widget class="QToolButton" name="zoom_all_command">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="default_tool">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="add_ship_tool">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="rotate_tool">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="add_route_tool">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="DropOutToolButton" name="edit_route_tool">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton:hover
+{
+    border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton
+{
+	background-color:rgb(30, 33, 39);
+}
+
+QToolButton::menu-indicator
+{
+   width:0px;
+}
+
+QToolButton QAbstractItemView {
+   background-color:rgb(30, 33, 39);
+   background: transparent;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="popupMode">
+          <enum>QToolButton::InstantPopup</enum>
+         </property>
+         <property name="arrowType">
+          <enum>Qt::NoArrow</enum>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="move_tool">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="delete_ship_tool">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="delete_route_command">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>10</y>
+           <width>35</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QAbstractButton::hover
+{
+	border: 2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+}
+
+QToolButton:checked
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}
+
+QToolButton:pressed
+{
+	border: 2px solid rgb(215, 2, 64);
+	border-radius: 6px;
+}</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="RoutePropertyView" name="RoutePropertyViewW" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>360</width>
+          <height>333</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>360</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid black;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1580</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar
+ {
+    background-color:rgb(30, 33, 39);
+	color:rgb(255, 255, 255);
+}
+
+QMenuBar::item 
+{
+    background-color: transparent;
+}
+
+QMenuBar::item:selected
+{
+    border:2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+	color:rgb(255, 255, 255);
+}</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light Condensed</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QMenu
+ {
+    background-color:rgb(30, 33, 39);
+}
+
+QMenu::item 
+{
+    background-color: transparent;
+	padding-left: 30px;
+	padding-right: 15px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color:rgb(255, 255, 255);
+}
+
+QMenu::item:selected
+{
+	border:2px solid rgb(2, 191, 150);
+	border-radius: 6px;
+	color:rgb(255, 255, 255);
+} </string>
+    </property>
+    <property name="title">
+     <string>Сценарий</string>
+    </property>
+    <addaction name="save_command"/>
+    <addaction name="load_command"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>35</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea</set>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="edit_route_point_tool">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/toolButton/res/edit_route_tool.png</normaloff>:/toolButton/res/edit_route_tool.png</iconset>
+   </property>
+   <property name="text">
+    <string>редактировать точку</string>
+   </property>
+   <property name="iconText">
+    <string>редактировать точку</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="add_route_point_tool">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/toolButton/res/add_route_point_tool.png</normaloff>:/toolButton/res/add_route_point_tool.png</iconset>
+   </property>
+   <property name="text">
+    <string>добавить точку</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="delete_route_point_tool">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/toolButton/res/delete_route_point.png</normaloff>:/toolButton/res/delete_route_point.png</iconset>
+   </property>
+   <property name="text">
+    <string>удалить точку</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="save_command">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/ToolBarIcons/add_route.png</normaloff>:/ToolBarIcons/add_route.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light Condensed</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="load_command">
+   <property name="text">
+    <string>Загрузить</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScreenView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">screenview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TargetPropertyView</class>
+   <extends>QWidget</extends>
+   <header location="global">targetpropertyview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RoutePropertyView</class>
+   <extends>QWidget</extends>
+   <header location="global">routepropertyview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DropOutToolButton</class>
+   <extends>QToolButton</extends>
+   <header location="global">dropouttoolbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

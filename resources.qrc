@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/ships">
+        <file>res/ownship.svg</file>
+        <file>res/selected_ownship.svg</file>
+        <file>res/selected_ship.svg</file>
+        <file>res/ship.svg</file>
+    </qresource>
+    <qresource prefix="/toolButton">
+        <file>res/add_route_point_tool.png</file>
+        <file>res/add_route_tool.png</file>
+        <file>res/add_ship_tool.png</file>
+        <file>res/default_tool.png</file>
+        <file>res/delete_route_command.png</file>
+        <file>res/delete_route_point.png</file>
+        <file>res/delete_ship_tool.png</file>
+        <file>res/edit_route_tool.png</file>
+        <file>res/move_tool.png</file>
+        <file>res/rotate_tool.png</file>
+        <file>res/zoom_all_command.png</file>
+    </qresource>
+</RCC>

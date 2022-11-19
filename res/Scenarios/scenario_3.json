@@ -1,0 +1,49 @@
+{
+    "base_point": {
+        "lat": 60,
+        "lon": 30
+    },
+    "name": "ОБП 2",
+    "targets": [
+        {
+            "bearing": 0,
+            "course": 0,
+            "distance": 0,
+            "friend_or_foe": 0,
+            "model_name": "Корвет",
+            "ownship": true
+        },
+        {
+            "bearing": 18,
+            "course": 216,
+            "distance": 17038.400000000001,
+            "friend_or_foe": 0,
+            "model_name": "Буксир",
+            "ownship": false
+        },
+        {
+            "bearing": 59,
+            "course": 296,
+            "distance": 17779.200000000001,
+            "friend_or_foe": 0,
+            "model_name": "Буксир",
+            "ownship": false
+        },
+        {
+            "bearing": 189,
+            "course": 13,
+            "distance": 14630.799999999999,
+            "friend_or_foe": 0,
+            "model_name": "Буксир",
+            "ownship": false
+        },
+        {
+            "bearing": 311,
+            "course": 83,
+            "distance": 16112.4,
+            "friend_or_foe": 0,
+            "model_name": "Буксир",
+            "ownship": false
+        }
+    ]
+}

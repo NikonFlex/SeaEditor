@@ -1,0 +1,25 @@
+{
+    "base_point": {
+        "lat": 60,
+        "lon": 30
+    },
+    "name": "ОБП 1",
+    "targets": [
+        {
+            "bearing": 0,
+            "course": 0,
+            "distance": 0,
+            "friend_or_foe": 0,
+            "model_name": "Корвет",
+            "ownship": true
+        },
+        {
+            "bearing": 270,
+            "course": 59,
+            "distance": 16680,
+            "friend_or_foe": 0,
+            "model_name": "Буксир",
+            "ownship": false
+        }
+    ]
+}
